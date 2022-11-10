@@ -37,6 +37,7 @@ test_gui2_video:
 install:
 	mv test_gui2_snap ../../target/root/
 	mv test_gui2_video ../../target/root/
+	cp libASICamera2.so ../../target/root/
 clean:
 	rm -f test_gui2_snap test_gui2_video
 #pkg-config libusb-1.0 --cflags --libs
