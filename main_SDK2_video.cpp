@@ -340,13 +340,13 @@ int  main()
 	printf("sensor temperature:%.1f\n", lVal/10.0);
 
 	bDisplay = 1;
-#ifdef _LIN
-	pthread_t thread_display;
-	pthread_create(&thread_display, NULL, Display, (void*)pRgb);
-#elif defined _WINDOWS
-	HANDLE thread_setgainexp;
-	thread_setgainexp = (HANDLE)_beginthread(Display,  NULL, (void*)pRgb);
-#endif
+// #ifdef _LIN
+// 	pthread_t thread_display;
+// 	pthread_create(&thread_display, NULL, Display, (void*)pRgb);
+// #elif defined _WINDOWS
+// 	HANDLE thread_setgainexp;
+// 	thread_setgainexp = (HANDLE)_beginthread(Display,  NULL, (void*)pRgb);
+// #endif
 
 	time1 = GetTickCount();
 	int iStrLen = 0, iTextX = 40, iTextY = 60;
