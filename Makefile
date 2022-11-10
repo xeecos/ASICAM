@@ -15,15 +15,15 @@ LIBSPATH = -L. -I.
 
 ifeq ($(ver), debug)
 DEFS = -D_LIN -D_DEBUG 
-CFLAGS = -g  -I $(INCLIB) -L $(LDLIB) $(DEFS) $(COMMON) $(LIBSPATH)  -lpthread  -DGLIBC_20
+CFLAGS = -g  -I $(INCLIB) -L $(LDLIB) $(DEFS) $(COMMON) $(LIBSPATH)  -lpthread  -DGLIBC_20 -lstdc++
 else
 DEFS = -D_LIN 
-CFLAGS =  -O3 -I $(INCLIB) -L $(LDLIB) $(DEFS) $(COMMON) $(LIBSPATH)  -lpthread  -DGLIBC_20
+CFLAGS =  -O3 -I $(INCLIB) -L $(LDLIB) $(DEFS) $(COMMON) $(LIBSPATH)  -lpthread  -DGLIBC_20 -lstdc++
 endif
 
 CC = arm-linux-gnueabi-g++
 AR= arm-linux-gnueabi-ar
-CFLAGS += -march=armv7 -mcpu=cortex-m3 -mthumb
+CFLAGS += -march=armv7 -mthumb
 
 
 all: test_gui2_snap test_gui2_video
