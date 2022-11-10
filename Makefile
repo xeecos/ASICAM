@@ -27,13 +27,16 @@ CFLAGS += -march=armv7 -mthumb
 
 
 all: test_gui2_snap test_gui2_video
-test_gui2_snap:main_SDK2_snap.cpp
+
+test_gui2_snap:
 	$(CC)  main_SDK2_snap.cpp -o test_gui2_snap $(CFLAGS) -lASICamera2
-test_gui2_video:main_SDK2_video.cpp
+
+test_gui2_video:
 	$(CC)  main_SDK2_video.cpp -o test_gui2_video $(CFLAGS) -lASICamera2
+
 install:
-	mv test_gui2_snap ../target/root/
-	mv test_gui2_video ../target/root/
+	mv test_gui2_snap ../../target/root/
+	mv test_gui2_video ../../target/root/
 clean:
 	rm -f test_gui2_snap test_gui2_video
 #pkg-config libusb-1.0 --cflags --libs
