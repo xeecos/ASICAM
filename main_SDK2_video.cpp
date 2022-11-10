@@ -108,7 +108,7 @@ int  main()
 	int definedformat;
 	
 	
-	IplImage *pRgb;
+	// IplImage *pRgb;
 
 
 	int numDevices = ASIGetNumOfConnectedCameras();
@@ -455,7 +455,7 @@ int  main()
 			// else
 			// 	pRgb=cvCreateImage(cvSize(width,height), IPL_DEPTH_8U, 1);
 			bDisplay = 1;
-			pthread_create(&thread_display, NULL, Display, (void*)pRgb);
+			// pthread_create(&thread_display, NULL, Display, (void*)pRgb);
 			ASIStartVideoCapture(CamInfo.CameraID); //start privew
 		}
 	}
