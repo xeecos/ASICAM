@@ -29,11 +29,11 @@ CFLAGS += -march=armv7 -mcpu=cortex-m3 -mthumb
 all: test_gui2_snap test_gui2_video
 test_gui2_snap:main_SDK2_snap.cpp
 	$(CC)  main_SDK2_snap.cpp -o test_gui2_snap $(CFLAGS) $(OPENCV) -lASICamera2
-	cp test_gui2_snap bin/$(platform)/
+	cp test_gui2_snap ~/
 
 test_gui2_video:main_SDK2_video.cpp
 	$(CC)  main_SDK2_video.cpp -o test_gui2_video $(CFLAGS) $(OPENCV) -lASICamera2
-	cp test_gui2_video bin/$(platform)/
+	cp test_gui2_video ~/
 
 clean:
 	rm -f test_gui2_snap test_gui2_video
