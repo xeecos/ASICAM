@@ -9,7 +9,7 @@ CC = arm-linux-gnueabi
 
 
 
-LIBSPATH = -L./ -I./
+LIBSPATH = -L. -I.
 
 
 
