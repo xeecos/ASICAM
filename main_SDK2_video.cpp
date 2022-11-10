@@ -404,7 +404,7 @@ int  main()
 		{
 			bChangeFormat = 0;
 			bDisplay = false;
-			pthread_join(thread_display, &retval);
+			// pthread_join(thread_display, &retval);
 			// cvReleaseImage(&pRgb);
 			ASIStopVideoCapture(CamInfo.CameraID);
 			
@@ -464,9 +464,9 @@ END:
 	if(bDisplay)
 	{
 		bDisplay = 0;
-#ifdef _LIN
-   		pthread_join(thread_display, &retval);
-#endif
+// #ifdef _LIN
+//    		pthread_join(thread_display, &retval);
+// #endif
 	}
 	
 	ASIStopVideoCapture(CamInfo.CameraID);

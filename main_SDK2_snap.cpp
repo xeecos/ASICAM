@@ -288,7 +288,7 @@ int  main()
 		{
 			bChangeFormat = 0;
 			bDisplay = false;
-			pthread_join(thread_display, &retval);
+			// pthread_join(thread_display, &retval);
 			// cvReleaseImage(&pRgb);
 			
 			switch(change)
@@ -347,11 +347,9 @@ END:
 	if(bDisplay)
 	{
 		bDisplay = 0;
-#ifdef _LIN
-   		pthread_join(thread_display, &retval);
-#elif defined _WINDOWS
-		Sleep(50);
-#endif
+// #ifdef _LIN
+//    		pthread_join(thread_display, &retval);
+// #endif
 	}
 	
 	ASIStopExposure(CamNum);
