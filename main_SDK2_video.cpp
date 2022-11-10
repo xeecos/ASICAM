@@ -11,20 +11,20 @@
 #define  MAX_CONTROL 7
 
 
-void cvText(IplImage* img, const char* text, int x, int y)
-{
-	CvFont font;
+// void cvText(IplImage* img, const char* text, int x, int y)
+// {
+// 	CvFont font;
 
-	double hscale = 0.6;
-	double vscale = 0.6;
-	int linewidth = 2;
-	// cvInitFont(&font,CV_FONT_HERSHEY_SIMPLEX | CV_FONT_ITALIC,hscale,vscale,0,linewidth);
+// 	double hscale = 0.6;
+// 	double vscale = 0.6;
+// 	int linewidth = 2;
+// 	// cvInitFont(&font,CV_FONT_HERSHEY_SIMPLEX | CV_FONT_ITALIC,hscale,vscale,0,linewidth);
 
-	// CvScalar textColor =cvScalar(255,255,255);
-	// CvPoint textPos =cvPoint(x, y);
+// 	// CvScalar textColor =cvScalar(255,255,255);
+// 	// CvPoint textPos =cvPoint(x, y);
 
-	// cvPutText(img, text, textPos, &font,textColor);
-}
+// 	// cvPutText(img, text, textPos, &font,textColor);
+// }
 extern unsigned long GetTickCount();
 
 int bDisplay = 0;
