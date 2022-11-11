@@ -1,2 +1,2 @@
 # ASICAM
-ASICAM for f1c200s
+ASICAM for Allwinner V3S

@@ -1,7 +1,6 @@
 ver = debug
 platform = arm
 
-CC = arm-linux-gnueabi
 #INCLIB = /usr/local/include
 #LDLIB = /usr/local/lib
 # OPENCV = -lopencv_core -lopencv_highgui -lopencv_imgproc#$(shell pkg-config --cflags opencv) $(shell pkg-config --libs opencv) -I/usr/include/opencv2
@@ -21,8 +20,8 @@ DEFS = -D_LIN
 CFLAGS =  -O3 -I $(INCLIB) -L $(LDLIB) $(DEFS) $(COMMON) $(LIBSPATH)  -lpthread  -DGLIBC_20 -lstdc++
 endif
 
-CC = arm-linux-gnueabi-g++
-AR= arm-linux-gnueabi-ar
+CC = arm-linux-gnueabihf-g++
+AR= arm-linux-gnueabihf-ar
 CFLAGS += -march=armv7 -mthumb
 
 
